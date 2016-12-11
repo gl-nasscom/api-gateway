@@ -34,7 +34,8 @@ public class ApiInfoController {
     public ResponseEntity<List<SwaggerResource>> swaggerResources() {
         List<SwaggerResource> resources = new ArrayList<SwaggerResource>();
         // Add composite services here. They will be exposed via the API Gateway's swagger page
-        resources.add(swaggerResource("Demo", "/swagger/demo", "2.0"));
+        resources.add(swaggerResource("Customer", "/swagger/customer", "2.0"));
+        resources.add(swaggerResource("Product", "/swagger/product", "2.0"));
 
         return new ResponseEntity<List<SwaggerResource>>(resources, HttpStatus.OK);
     }

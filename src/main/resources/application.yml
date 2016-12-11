@@ -50,14 +50,21 @@ zuul:
     # Explicit mapping of our registered cloud services:
 
     # Project based mappings (all requests are in the context of a specific project)
-    dockerized-microservice:
-      path: /api/Demo/*
+    product-core-service:
+      path: /api/core/products/*
+      stripPrefix: false
+    customer-core-service:
+      path: /api/core/customers/*
       stripPrefix: false
 
     # Swagger documentation pass throughs for composite services. Add one entry per composite service
-    dockerized-microservice-swagger:
-      path: /swagger/demo
-      serviceId: dockerized-microservice
+    product-core-service-swagger:
+      path: /swagger/product
+      serviceId: product-core-service
+      stripPrefix: false
+    customer-core-service-swagger:
+      path: /swagger/customer
+      serviceId: customer-core-service
       stripPrefix: false
 
 logging:
