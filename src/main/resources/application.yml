@@ -102,7 +102,7 @@ spring:
 
 eureka:
   instance:
-    preferIpAddress: false
+    preferIpAddress: true
     #hostName: dockerized-eureka-server
   client:
     serviceUrl:
